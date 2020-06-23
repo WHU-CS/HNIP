@@ -11,19 +11,29 @@ $ python main.py -c config/xx.ini
 
 ## Requirements
 The implementation of HNIP is tested under Python 3.7, with the following packages installed:
+* tensorflow-gpu==1.14.0
+* numpy
+* scipy
 
 
 ## Input
 Your input graph data should be a **txt** file and be under **GraphData folder**
 
 ### Input format
-The txt file should be edgelist and the first line should be **N**, the number of nodes
-and **E**, the number of links
+The txt file should be adjlist with time stamp. In particular, the *i*-th line contains information 
+about the *i*-th node and has the following structure:
+`$$A:n_1,w_1,t_1;n_2,w_2,t_2;...;n_k,w_k,t_k$$`
+where $A$ is the node ID, $n_1,...,n_k$ are the nodes adjacent to this node, 
+$$w_1,...,w_k$$ are the weights of the links, and $$t_1,...,t_k$$ are the time stamps 
+of the links. Note that the nodes are numbered starting from 0. Let $t_{max}$ be the 
+time of the last link, $t_min$ be the time of the first link, and $t_c$ be the actual
+time of the link $e_k$, then the $t_k = \frac{t_c - t_{min}}{t_{max}-t_{min}}$. 
 
 ### txt file  
-`
-191 1930
-`
+`0:1,1.0,0.34;2,1.0,0.33;
 
-$a_1$
+1:0,1.0,0.34;3,1.0,0.34;
+
+...`
+
 
