@@ -9,6 +9,10 @@ Please check the paper for more details.
 $ python main.py -c config/xx.ini
 `
 
+## Requirements
+The implemetation of HNIP is tested under Python 3.7, with the following packages installed:
+
+
 ## Input
 Your input graph data should be a **txt** file and be under **GraphData folder**
 
