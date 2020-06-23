@@ -46,6 +46,17 @@ dimensional representation:
 ...
 ```
 
+## Baselines
+In our paper, we used the following methods for comparision:
+* `DeepWalk` 'Deepwalk:online learning of social representations' [source](https://github.com/phanein/deepwalk.git)
+* `Node2vec` ' node2vec: Scalable feature learning for networks' [source](https://github.com/aditya-grover/node2vec.git)
+* `SDNE` 'Structural deep network embedding' [source](https://github.com/suanrong/SDNE.git)
+* `CTDNE` 'Dynamic network embeddings: From random walks to temporal random walks' 
+* `NetWalk` 'Netwalk: A flexible deep embedding approach for anomaly detection in dynamic networks' [source](https://github.com/chengw07/NetWalk.git)
+
+*Note* that the `CTDNE` is not open-sourced, and we have implemented it based on the published paper. You 
+can find the implementation in the *utils* folder.
+
 ## Citing
 If you find HNIP useful in your research, we ask that you cite the following paper:
 ```
