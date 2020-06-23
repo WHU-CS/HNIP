@@ -23,6 +23,7 @@ Your input graph data should be a **txt** file and be under **GraphData folder**
 The txt file should be adjlist with time stamp. In particular, the *i*-th line contains information 
 about the *i*-th node and has the following structure:
 `$$A:n_1,w_1,t_1;n_2,w_2,t_2;...;n_k,w_k,t_k$$`
+
 where $A$ is the node ID, $n_1,...,n_k$ are the nodes adjacent to this node, 
 $$w_1,...,w_k$$ are the weights of the links, and $$t_1,...,t_k$$ are the time stamps 
 of the links. Note that the nodes are numbered starting from 0. Let $t_{max}$ be the 
@@ -30,10 +31,33 @@ time of the last link, $t_min$ be the time of the first link, and $t_c$ be the a
 time of the link $e_k$, then the $t_k = \frac{t_c - t_{min}}{t_{max}-t_{min}}$. 
 
 ### txt file  
-`0:1,1.0,0.34;2,1.0,0.33;
-
+```
+0:1,1.0,0.34;2,1.0,0.33;
 1:0,1.0,0.34;3,1.0,0.34;
+...
+```
 
-...`
+## Output 
+The output is the learned representation of the input network, all lines are node ID and *d*
+dimensional representation:
+```
+0 0.0009352565 9.563565e-05 0.0013471842 ...
+1 0.0009587407 9.6946955e-05 0.0013585389 ...
+...
+```
 
-
+## Citing
+If you find HNIP useful in your research, we ask that you cite the following paper:
+```
+@inproceedings{DBLP:conf/aaai/QiuH00DJ20,
+  author    = {Zhenyu Qiu and Wenbin Hu and Jia Wu and Weiwei Liu and Bo Du and Xiaohua Jia},
+  title     = {Temporal Network Embedding with High-Order Nonlinear Information},
+  booktitle = {The Thirty-Fourth {AAAI} Conference on Artificial Intelligence, {AAAI}
+               2020, The Thirty-Second Innovative Applications of Artificial Intelligence
+               Conference, {IAAI} 2020, The Tenth {AAAI} Symposium on Educational
+               Advances in Artificial Intelligence, {EAAI} 2020, New York, NY, USA,
+               February 7-12, 2020},
+  pages     = {5436--5443},
+  year      = {2020}
+}
+```
