@@ -4,7 +4,7 @@ This repository provides a reference implementation of HNIP proposed in "[Tempor
 The HNIP algorithm learns a representations for nodes in a temporal graph.
 Please check the paper for more details.
 
-##Basic Usage
+## Basic Usage
 `
 $ python main.py -c config/xx.ini
 `
@@ -19,6 +19,5 @@ and **E**, the number of links
 ### txt file  
 `
 191 1930
-
 `
 
