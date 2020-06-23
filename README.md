@@ -72,3 +72,5 @@ If you find HNIP useful in your research, we ask that you cite the following pap
   year      = {2020}
 }
 ```
+
+If you have any questions, please email to qiuzy@whu.edu.cn
